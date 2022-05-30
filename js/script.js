@@ -21,6 +21,9 @@ const playButton = document.getElementById("playbtn");
 let difficulty = document.getElementById("difficultySelect");
 
 playButton.addEventListener("click", function () {
+
+  squareContainer.classList.remove("disabled")
+
   console.log(difficulty.value);
   let totCells = 0;
 
@@ -48,6 +51,7 @@ playButton.addEventListener("click", function () {
       goodClicks = goodClicks + 1;
       if (goodClicks === totCells - 16) {
         alert(`HAI VINTO! Il tuo punteggio è ${goodClicks}`);
+        squareContainer.classList.add("disabled")
       }
     });
   });
@@ -62,8 +66,8 @@ playButton.addEventListener("click", function () {
       );
       for (const bomb of bombs) {
         bomb.classList.add("bombclicked");
+        squareContainer.classList.add("disabled")
       }
-      return false;
     });
   });
 });
