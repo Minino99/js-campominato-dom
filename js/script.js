@@ -48,7 +48,7 @@ playButton.addEventListener("click", function () {
       square.classList.add("clicked");
       goodClicks = goodClicks + 1;
       if (goodClicks === (totCells - 16)){
-        alert(`HAI VINTO! Il tuo punteggio è ${goodClicks}`)
+        alert(`HAI VINTO! Il tuo punteggio è ${goodClicks}`);
       }
     });
   });
@@ -63,6 +63,7 @@ playButton.addEventListener("click", function () {
       for (const bomb of bombs){
         bomb.classList.add("bombclicked");
       }
+      return false
     });
   });
 
