@@ -15,6 +15,7 @@ body{
 
 .mainbody .container{
  flex-wrap: wrap;
+ cursor: crosshair;
 }
 
 .header{
