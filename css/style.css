@@ -45,3 +45,14 @@ body{
  background-color: #DD0C39;
  color: white;
 }
+
+.bomb{
+ height: 50px;
+ width: 50px;
+ border: 1px solid black;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.2rem;
+ font-weight: 500;
+}
