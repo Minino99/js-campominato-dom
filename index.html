@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.css"
+      integrity="sha512-F5fn88UDJWd0T1GwpnIpbuFuSxCgXNnJhIihkiWeqYUyLt3oPUaYzL774VjL7eGj8ktZCZQS//txAxgokiz1Lw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div
+        class="container d-flex justify-content-between align-items-center py-3"
+      >
+        <div class="d-flex align-items-center gap-4">
+          <img src="img/logo-copia.png" alt="" />
+          <span class="headertitle">Campo minato</span>
+        </div>
+        <div>
+          <span>Difficoltà: </span>
+          <select name="" id="difficultySelect" class="pe-5">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <input type="button" value="Play" class="px-4" id="playbtn" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mainbody d-flex align-items-center">
+      <div class="container d-flex py-5" id="squarecontainer">
+      </div>
+    </div>
+
+    <div class="container d-flex align-items-center footer">
+      <span>Made with ♥ by <a href="https://boolean.careers/">Boolean</a></span>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

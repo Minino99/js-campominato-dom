@@ -1,0 +1,47 @@
+.headertitle{
+ font-size: 2.5rem;
+ font-weight: 700;
+}
+
+
+body{
+ height: 100vh;
+}
+
+.mainbody{
+ background-color: #7CFFD2;
+ height: 85%;
+}
+
+.mainbody .container{
+ flex-wrap: wrap;
+}
+
+.header{
+ height: 10%;
+}
+
+.footer{
+ height: 5%;
+}
+
+.square{
+ height: 50px;
+ width: 50px;
+ border: 1px solid black;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.2rem;
+ font-weight: 500;
+}
+
+.clicked{
+ background-color: #6495F1;
+ color: white;
+}
+
+.bombclicked{
+ background-color: #DD0C39;
+ color: white;
+}
