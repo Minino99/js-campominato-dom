@@ -21,8 +21,7 @@ const playButton = document.getElementById("playbtn");
 let difficulty = document.getElementById("difficultySelect");
 
 playButton.addEventListener("click", function () {
-
-  squareContainer.classList.remove("disabled")
+  squareContainer.classList.remove("disabled");
 
   console.log(difficulty.value);
   let totCells = 0;
@@ -46,12 +45,18 @@ playButton.addEventListener("click", function () {
   let goodClicks = 0;
 
   squares.forEach((square) => {
+    square.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      square.classList.add("flag");
+      square.classList.remove("clicked");
+    });
     square.addEventListener("click", function () {
       square.classList.add("clicked");
+      square.classList.remove("flag");
       goodClicks = goodClicks + 1;
       if (goodClicks === totCells - 16) {
         alert(`HAI VINTO! Il tuo punteggio è ${goodClicks}`);
-        squareContainer.classList.add("disabled")
+        squareContainer.classList.add("disabled");
       }
     });
   });
@@ -59,14 +64,19 @@ playButton.addEventListener("click", function () {
   const bombs = document.querySelectorAll(".bomb");
 
   bombs.forEach((bomb) => {
+    bomb.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      bomb.classList.add("flag")
+    });
     bomb.addEventListener("click", function () {
       bomb.classList.add("bombclicked");
+      bomb.classList.remove("flag")
       alert(
         `Hai trovato una bomba! HAI PERSO. Il tuo punteggio è ${goodClicks}`
       );
       for (const bomb of bombs) {
         bomb.classList.add("bombclicked");
-        squareContainer.classList.add("disabled")
+        squareContainer.classList.add("disabled");
       }
     });
   });
